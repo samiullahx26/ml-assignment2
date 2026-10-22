@@ -1,23 +1,21 @@
-# ML Assignment 2 — Streamlit Apps
+# ML Assignment 2 - Streamlit Apps
 
-Two end-to-end machine learning demos (AIC354, COMSATS), deployed on Streamlit Community Cloud.
+Two machine learning web apps for AIC354, deployed on Streamlit Community Cloud.
 
-| App | Main file path | Model | Test accuracy |
+| App | Main file | Model | Test accuracy |
 |---|---|---|---|
-| 🚢 Titanic Survival Predictor | `titanic/app.py` | SVC (LabelEncoder + 4 categorical features) | 0.80 |
-| ❤️ Heart Disease Predictor | `heart-disease/app.py` | SVC (LabelEncoder + 4 data-driven features) | 0.78 |
+| Titanic Survival Predictor | `titanic/app.py` | SVC with label encoding, 4 features | 80% |
+| Heart Disease Predictor | `heart-disease/app.py` | SVC with label encoding, 4 features | 78% |
 
-Each app is self-contained (its own `app.py`, trained `.pkl`, `requirements.txt`, `runtime.txt`).
+Each app folder contains its own `app.py`, trained `.pkl` model, `requirements.txt` and `runtime.txt`.
 
 ## Deploy
-1. Push this repo to **public** GitHub.
-2. <https://share.streamlit.io> → **Create app** → pick this repo.
-3. Set **Main file path** to `titanic/app.py` (or `heart-disease/app.py`) → **Deploy**.
+1. Push this repository to a public GitHub repo.
+2. Go to https://share.streamlit.io, create an app and select this repo.
+3. Set the main file path to `titanic/app.py` or `heart-disease/app.py` and deploy.
 
 ## Run locally
-```bash
+```
 pip install -r heart-disease/requirements.txt
 streamlit run heart-disease/app.py
 ```
-
-> ⚠️ The Heart Disease app is a teaching demo built from the UCI Cleveland dataset — **not medical advice.**
